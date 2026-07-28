@@ -436,6 +436,9 @@ SERVICES
   position:relative;
   background:linear-gradient(135deg,var(--bg-2),#e7e1d6);
 }
+.project-media.ratio-portrait{
+  aspect-ratio:4/5;
+}
 .project-info{
   flex:1;
   min-width:0;
