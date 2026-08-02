@@ -1,0 +1,62 @@
+/* ============================================================
+   SERVICE DETAIL PAGES — additive styles only.
+   Loaded alongside style.css; nothing here overrides the homepage.
+   ============================================================ */
+
+/* breadcrumb / back link */
+.svc-breadcrumb{
+  display:flex;align-items:center;gap:8px;
+  font-size:13.5px;font-weight:600;color:var(--muted);
+  margin-top:120px;margin-bottom:36px;
+}
+.svc-breadcrumb a{color:var(--muted);transition:color .3s;}
+.svc-breadcrumb a:hover{color:var(--teal);}
+.svc-breadcrumb i{font-size:11px;}
+.svc-breadcrumb .current{color:var(--ink);}
+
+/* service hero */
+.svc-hero{padding-bottom:70px;}
+.svc-hero-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:60px;align-items:end;}
+.svc-hero h1{font-size:clamp(38px,5.4vw,64px);line-height:1.03;font-weight:600;letter-spacing:-.01em;}
+.svc-hero-sub{color:var(--muted);font-size:17px;max-width:440px;padding-bottom:6px;}
+.svc-num-badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:64px;height:64px;border-radius:18px;background:var(--bg-2);
+  font-family:var(--serif);font-weight:700;font-size:20px;color:var(--teal);
+  margin-bottom:22px;
+}
+
+/* included list */
+.svc-included{padding-top:0;}
+.svc-included-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border);border-radius:var(--radius);overflow:hidden;}
+.svc-included-item{background:var(--bg);padding:32px 34px;display:flex;gap:18px;align-items:flex-start;}
+.svc-included-item i{color:var(--teal);font-size:18px;margin-top:3px;flex:0 0 auto;}
+.svc-included-item h4{font-size:17px;font-weight:600;margin-bottom:6px;}
+.svc-included-item p{color:var(--muted);font-size:14.5px;}
+
+/* related work (reuses .project-row / .proj-carousel look from style.css) */
+.svc-work-head{margin-bottom:56px;}
+
+/* empty-state card, used when a service has no dedicated case study yet */
+.svc-empty-work{
+  border:1px dashed var(--border);border-radius:var(--radius);
+  padding:56px 44px;text-align:center;
+}
+.svc-empty-work i{font-size:26px;color:var(--teal);margin-bottom:18px;}
+.svc-empty-work h3{font-size:22px;margin-bottom:10px;}
+.svc-empty-work p{color:var(--muted);max-width:480px;margin:0 auto 26px;}
+
+/* CTA banner */
+.svc-cta{
+  background:var(--ink);color:var(--bg);border-radius:var(--radius);
+  padding:64px 56px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;
+}
+.svc-cta h2{color:var(--bg);font-size:clamp(26px,3vw,36px);max-width:520px;}
+.svc-cta .btn-primary{background:var(--gold);color:var(--ink);}
+.svc-cta .btn-primary:hover{box-shadow:0 14px 30px -8px rgba(245,180,0,.35);}
+
+@media(max-width:860px){
+  .svc-hero-grid{grid-template-columns:1fr;gap:26px;align-items:start;}
+  .svc-included-grid{grid-template-columns:1fr;}
+  .svc-cta{padding:44px 30px;flex-direction:column;text-align:center;}
+}
